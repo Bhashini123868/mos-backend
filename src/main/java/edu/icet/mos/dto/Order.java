@@ -1,5 +1,6 @@
 package edu.icet.mos.dto;
 
+import edu.icet.mos.entity.OrderDetailsEntity;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

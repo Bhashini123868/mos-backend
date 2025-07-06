@@ -1,6 +1,6 @@
 package edu.icet.mos.entity;
 
-import edu.icet.mos.dto.Order;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +21,7 @@ public class OrderDetailsEntity {
     private Integer itemID;
 
     @JoinColumn(name = "orderID", referencedColumnName = "orderID",nullable = false)
-    private Order order;
+    private OrderEntity order;
 
     private Integer qty;
     private Double unitPrice;
