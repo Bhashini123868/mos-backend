@@ -24,7 +24,7 @@ public class OrderEntity {
     private Integer orderID;
 
     @Column(nullable = false)
-    @NotNull(message = "Customer ID is required")
+    @NotBlank(message = "Customer ID is required")
     private String cusID;
 
     @Column(nullable = false)
@@ -39,4 +39,5 @@ public class OrderEntity {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
     private List<OrderDetailsEntity> orderDetail;
+
 }

@@ -20,7 +20,8 @@ public class OrderDetailsEntity {
     private Integer orderDetailID;
     private Integer itemID;
 
-    @JoinColumn(name = "orderID", referencedColumnName = "orderID",nullable = false)
+    @ManyToOne()
+    @JoinColumn(name = "orderID", referencedColumnName = "orderID" ,nullable = false)
     private OrderEntity order;
 
     private Integer qty;
